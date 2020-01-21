@@ -18,6 +18,13 @@ import { DiscussionsComponent } from './discussions/discussions.component';
 import { DiscussionComponent } from './discussions/discussion/discussion.component';
 import { ProgressComponent } from './progress/progress.component';
 import { CalenderComponent } from './calender/calender.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { FormsModule} from '@angular/forms';
+import { AnswersComponent } from './discussions/discussion/answers/answers.component';
+import { AnswerComponent } from './discussions/discussion/answers/answer/answer.component';
+import { AddAnswerComponent } from './discussions/discussion/add-answer/add-answer.component'
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,6 +55,9 @@ const appRoutes: Routes = [
     DiscussionComponent,
     ProgressComponent,
     CalenderComponent,
+    AnswersComponent,
+    AnswerComponent,
+    AddAnswerComponent,
     
   ],
   imports: [
@@ -57,7 +67,13 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

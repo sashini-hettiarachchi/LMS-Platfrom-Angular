@@ -2,5 +2,5 @@
   <app-resource *ngFor="let resource of resources" [resource] ="resource"></app-resource>   
 </div> -->
 <div class="card-columns">
-    <app-resource *ngFor="let resource of resources" [resource] ="resource"></app-resource>
+    <app-resource *ngFor="let resource of resources trackBy: trackElement" [resource] ="resource"></app-resource>
 </div>

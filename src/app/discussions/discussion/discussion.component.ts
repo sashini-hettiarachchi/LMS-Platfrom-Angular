@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-discussion',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discussion.component.css']
 })
 export class DiscussionComponent implements OnInit {
+
+  @Input() discussion;
 
   constructor() { }
 

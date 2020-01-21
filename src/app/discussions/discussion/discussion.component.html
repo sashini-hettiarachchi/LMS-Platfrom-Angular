@@ -1,1 +1,16 @@
-<p>discussion works!</p>
+<div class="card mb-3">
+  <h4 class="card-header" style="color: darkblue;">{{discussion.title}}</h4>
+  <div class="card-body">
+    <h5 class="card-title mb-3">{{discussion.question}}</h5>
+    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary mr-3" data-toggle="modal" data-target="#exampleModalCenter"> Show
+      Answers </button>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary mr-3" data-toggle="modal" data-target="#modalLoginForm"> Add
+      Answer </button>
+    <app-answers [answers]="discussion.answers"></app-answers>
+    <app-add-answer></app-add-answer>
+  </div>
+
+</div>

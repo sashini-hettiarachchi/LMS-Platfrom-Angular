@@ -41,6 +41,9 @@ export class ResourcesComponent implements OnInit {
     
     ]
 
+    trackElement(index: number, element: any) {
+      return element ? element.guid : null
+    }
   constructor() { }
 
   ngOnInit() {
