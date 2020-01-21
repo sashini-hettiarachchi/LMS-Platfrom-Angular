@@ -1,0 +1,12 @@
+<div class="card">
+    <img class="card-img-top" [src]="resource.imgSrc" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{resource.title}}</h5>
+      <!-- <p class="card-text">{{resource.content}}</p> -->
+      <ul>
+          <li *ngFor="let link of resource.links"><a [href]="link.src" target="_blank"><p class="card-text"><small class="text-muted">{{link.topic}}</small></p></a></li>
+      </ul>
+      
+    </div>
+</div>
+

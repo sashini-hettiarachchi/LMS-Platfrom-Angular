@@ -1,2 +1,3 @@
-<p>assignments works!</p>
-<app-assignment></app-assignment>
+<div id="accordion">
+   <app-assignment *ngFor="let assignment of assignments trackBy: trackElement " [assignment]="assignment"></app-assignment> 
+</div>

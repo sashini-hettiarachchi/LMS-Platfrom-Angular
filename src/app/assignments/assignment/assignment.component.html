@@ -1,1 +1,18 @@
-<p>assignment works!</p>
+<div class="card bg-light mb-3">
+  <h4 class="card-header" style="color: darkblue;">{{assignment.title}}</h4>
+   
+
+     <div class="card-body">
+            <h6 class="card-title">Description</h6>
+            <p class="card-text">{{assignment.description}}</p>
+            <h6 class="card-title" *ngIf="assignment.questions">Questions</h6>
+            <ol *ngIf="assignment.questions" >
+              <li *ngFor="let question of assignment.questions"><p class="card-text" >{{question}}</p></li>
+            </ol>
+            <h6 class="card-title">Deadline</h6>  
+            <p class="card-text">{{assignment.deadline}}</p>
+            <a href="#" class="btn btn-primary">Submit</a>
+          </div>
+   
+</div>
+

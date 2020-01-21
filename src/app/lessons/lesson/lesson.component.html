@@ -1,8 +1,13 @@
 <div class="card mb-3">
-    <h5 class="card-header">{{lesson.title}}</h5>
+    <h5 class="card-header" style="color: darkblue;">{{lesson.title}}</h5>
     <div class="card-body">
-      <!-- <h5 class="card-title">Special title treatment</h5> -->
+      <h6 class="card-title">Lesson Introduction</h6>
       <p class="card-text">{{lesson.description}}</p>
+      <h6 class="card-title">Lesson learning objectives</h6>
+      <ul>
+        <li *ngFor="let objective of lesson.objectives"><p>{{objective}}</p></li>
+      </ul>
+      <h6 class="card-title">Learning Materials</h6>
       <a href="{{lesson.videoUrl}}" target="_blank"><i class="fas fa-play-circle fa-3x mr-3"></i></a>
       <a href="{{lesson.noteUrl}}" target="_blank" ><i class="fas fa-book fa-3x mr-3"></i></a>
       <a href="{{lesson.quizUrl}}" target="_blank" *ngIf="lesson.quizUrl" ><i class="fas fa-question-circle fa-3x mr-3"></i></a> 

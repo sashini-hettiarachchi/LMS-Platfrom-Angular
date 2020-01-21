@@ -12,12 +12,22 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { AssignmentComponent } from './assignments/assignment/assignment.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { ResourceComponent } from './resources/resource/resource.component';
+import { DiscussionsComponent } from './discussions/discussions.component';
+import { DiscussionComponent } from './discussions/discussion/discussion.component';
+import { ProgressComponent } from './progress/progress.component';
+import { CalenderComponent } from './calender/calender.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'lessons', component: LessonsComponent },
   { path: 'lessons/lesson',      component: LessonComponent },
   { path: 'assignments',      component: AssignmentsComponent },
+  { path: 'resources',      component: ResourcesComponent },
+  { path: 'discussions',      component: DiscussionsComponent },
+  { path: 'progress',      component: ProgressComponent},
+  { path: 'calendar',      component: CalenderComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
 
@@ -32,6 +42,12 @@ const appRoutes: Routes = [
     AssignmentComponent,
     PagenotfoundComponent,
     HomeComponent,
+    ResourcesComponent,
+    ResourceComponent,
+    DiscussionsComponent,
+    DiscussionComponent,
+    ProgressComponent,
+    CalenderComponent,
     
   ],
   imports: [
